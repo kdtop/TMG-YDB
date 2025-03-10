@@ -470,7 +470,7 @@ int	iott_rdone (mint *v, uint8 nsec_timeout)	/* timeout in nanoseconds */
 			{	/* may need to deal with terminators > ASCII_MAX and/or LS and PS if default_mask_term */
 				ret = TRUE;
 				char_is_terminator = IS_TERMINATOR(temp_io_state.mask_term.mask, INPUT_CHAR, utf8_active);
-				//KT NOTE: Doesn't handle special terminators like other READ functions does.
+				//kt NOTE: Doesn't handle special terminators like other READ functions does.
 				//         Consider handling with IS_SPECIAL_TERMINATOR() in future?
 				if (!char_is_terminator  &&  echo_mode) //kt mod
 				{
